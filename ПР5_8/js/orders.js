@@ -32,10 +32,7 @@ function addOrder(itemName, price , tel) {
     });
 }
 
-// Пример вызова при нажатии на кнопку
-document.getElementById("cart-button").addEventListener("click", () => {
-    addOrder('Маргарита', 693 , 952493188);
-});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
