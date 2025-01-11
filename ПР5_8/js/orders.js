@@ -17,7 +17,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase(app);
 
-// Пример функции добавления заказа
+
 function addOrder(itemName, price , tel) {
     const ordersRef = ref(database, 'orders');
     push(ordersRef, {
@@ -46,18 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let cart = [];
 
-    // Функция для сохранения корзины в localStorage
+   
     function saveCart() {
         localStorage.setItem("cart", JSON.stringify(cart));
     }
 
-    // Функция для загрузки корзины из localStorage
+    
     function loadCart() {
         const savedCart = localStorage.getItem("cart");
         cart = savedCart ? JSON.parse(savedCart) : [];
     }
 
-    // Функция для обновления отображения корзины
+
     function updateCart() {
         modalBody.innerHTML = "";
         if (cart.length === 0) {
